@@ -39,9 +39,11 @@ header {
 .item {
   display: inline-block;
   vertical-align: top;
+  border: 1px solid #d4c8c8;
   margin-bottom: 40px;
-  padding-right: 20px;
-  width: 300px;
+  padding: 20px;
+  width: 282px;
+  height: 400px;
 }
 
 .item-header {
