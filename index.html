@@ -56,7 +56,7 @@
     function showInfo(data) {
       // TODO Parse article URL to generate source for link
       // TODO Add filtering and sorting
-      var options = {'data': data, 'tableDiv': '#acts'}
+      var options = {'data': data.reverse(), 'tableDiv': '#acts'}
       Sheetsee.makeTable(options)
     }
     </script>
