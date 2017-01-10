@@ -31,7 +31,14 @@ a {
 }
 
 header {
-  padding-bottom: 60px;
+  padding-bottom: 30px;
+}
+
+.month-title {
+  font-size: 2em;
+  padding-bottom: 10px;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #333;
 }
 
 /* EACH ITEM ~~~~~~~~~~~~~~~~~~~ */
