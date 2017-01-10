@@ -1,0 +1,78 @@
+body {
+  font-family: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
+  margin: 0; padding: 0;
+  font-size: 1.4em;
+  color: #333;
+  background-color: #fdfdfd;
+}
+
+a {
+  color: #3f6def;
+  text-decoration: none;
+  padding-bottom: 1px;
+  border-bottom: 1px dotted #3f6def;
+}
+
+.wrapper {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.activities-list {
+  margin: 0; padding: 0;
+}
+
+.activities-list li {
+  display: inline;
+  margin: 0; padding: 0;
+  margin-right: 16px;
+  padding: 8px 16px;
+}
+
+header {
+  padding-bottom: 60px;
+}
+/* EACH ITEM ~~~~~~~~~~~~~~~~~~~ */
+
+.item {
+  padding-bottom: 40px;
+}
+
+.item-header {
+  padding-bottom: 12px;
+}
+
+.item-header span {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 8px 16px;
+  font-size: .7em;
+}
+
+.item-activity {
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  font-weight: bold;
+  font-size: .7em;
+}
+
+.obstruction {
+  background-color: #ef527e;
+  color: #f7eef0;
+}
+
+.departure {
+  background-color: #ef624b;
+  color: #ffeeec;
+}
+
+.lie {
+  background-color: #da4242;
+  color: #f3eded;
+}
+
+.illegal {
+  background-color: #ffb66c;
+  color: #fff6ee;
+}
