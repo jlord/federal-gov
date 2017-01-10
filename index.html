@@ -34,11 +34,11 @@
       {{#rows}}
       <div class="item">
         <div class="item-header">
+          <div class="item-date"><b>{{date}}</b></div><br>
           <span class="item-activity {{activity}}">{{activity}}</span>
         </div>
         <small>
           <span class="meta item-branch">{{branch}} Branch</span> —
-          <span class="meta item-date">{{date}}</span>
         </small>
         <h2 class="item-description">{{description}}</h2>
         <p>{{detail}}</p>
@@ -56,6 +56,14 @@
     function showInfo(data) {
       // TODO Parse article URL to generate source for link
       // TODO Add filtering and sorting
+      function parseDates(data) {
+        var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November']
+        return data.map(function (item) {
+          var parts = item.date.split('/')
+          item.date = months[(parts[0] - 1)] + ' ' + parts[1] + ', ' + parts[2]
+        })
+      }
+      parseDates(data)
       var options = {'data': data.reverse(), 'tableDiv': '#acts'}
       Sheetsee.makeTable(options)
     }
