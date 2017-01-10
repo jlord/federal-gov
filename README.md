@@ -1,6 +1,9 @@
+<a href="http://jlord.github.io/forkngo"><img src='https://github.com/jlord/forkngo/blob/gh-pages/badges/charcoal.png?raw=true' width="200"></a>
+
 # Federal Government
 
-This is a website generated from a [Google Spreadsheet](https://docs.google.com/spreadsheets/d/17H2IL-o2G-JAwaukZCZ0aCfL09nEthZb_EUrB3wikwY/edit#gid=0) of articles about the actions of the United States Federal Government in 2017.
+This is a [website](https://jlord.github.io/federal-gov) generated from a [Google Spreadsheet](https://docs.google.com/spreadsheets/d/17H2IL-o2G-JAwaukZCZ0aCfL09nEthZb_EUrB3wikwY/edit#gid=0) of articles about the actions of the United States Federal Government in 2017.
+
 
 ---
 
@@ -10,7 +13,7 @@ There are a lot of things happening daily as a new administration prepares to ta
 
 ### Selection
 
-I am selecting events which challenge the way the US Government functions. Right now these are broadly categorized by what it is that made each event newsworthy: Is it potentially illegal? Is a lie? Does it intend to hinder the normal functions of the government? Is it a shocking break with convention? If the government does something good that's great, but those aren't the things to cover here. Feel free to fork this repository and create that site if you so desire.  
+I am selecting events which challenge the way the US Government functions. Right now these are broadly categorized by what it is that made each event newsworthy: Is it potentially illegal? Is a lie? Does it intend to hinder the normal functions of the government? Is it a shocking break with convention? If the government does something good that's great, but those aren't the things to cover here. Feel free to [fork this repository and create that site](http://jlord.github.io/forkngo) if you so desire.  
 
 ### Sources
 
