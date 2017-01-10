@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Federal Government 2017">
+    <meta name="author" content="Jessica Lord">
+    <title>Federal Government 2017</title>
+    <!-- TODO <link rel="icon" type="image/png" href="favicon.png"> -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="sample-data.js"></script>
+    <script type="text/javascript" src="js/tabletop.js"></script>
+    <script type="text/javascript" src="js/sheetsee.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="wrapper">
+        <h1>Federal Government 2017</h1>
+        <p>Summaries of events from the US Government. Project <a href="https://github.com/jlord/federal-gov" target="_blank">code</a> and <a href="https://docs.google.com/spreadsheets/d/17H2IL-o2G-JAwaukZCZ0aCfL09nEthZb_EUrB3wikwY/edit#gid=0" target="_blank">data</a>.</p>
+        <h4>Types of Activities</h4>
+        <ul class="activities-list">
+          <li class="item-activity obstruction">Obstruction</li>
+          <li class="item-activity illegal">Illegal</li>
+          <li class="item-activity lie">Lie</li>
+          <li class="item-activity departure">Departure</li>
+      </div>
+    </header>
+
+    <div id="acts" class="wrapper">Loading...</div>
+
+    <script id="acts_template" type="text/html">
+      {{#rows}}
+      <div class="item">
+        <div class="item-header">
+          <span class="item-activity {{activity}}">{{activity}}</span>
+        </div>
+        <small>
+          <span class="meta item-branch">{{branch}} Branch</span> —
+          <span class="meta item-date">{{date}}</span>
+        </small>
+        <h2 class="item-description">{{description}}</h2>
+        <p>{{detail}}</p>
+        <small><a href="{{article}}">Article</a></small>
+      </div>
+      {{/rows}}
+    </script>
+
+    <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+      var URL = "17H2IL-o2G-JAwaukZCZ0aCfL09nEthZb_EUrB3wikwY"
+      Tabletop.init({ key: URL, callback: showInfo, simpleSheet: true })
+    })
+
+    function showInfo(data) {
+      // TODO Parse article URL to generate source for link
+      // TODO Add filtering and sorting
+      var options = {'data': data, 'tableDiv': '#acts'}
+      Sheetsee.makeTable(options)
+    }
+    </script>
+  </body>
+</html>
