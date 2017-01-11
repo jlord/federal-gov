@@ -21,10 +21,11 @@
         <p>Read about the <a href="https://github.com/jlord/federal-gov/blob/master/README.md" target="_blank">project</a>, see the <a href="https://github.com/jlord/federal-gov" target="_blank">code</a> or use the <a href="https://docs.google.com/spreadsheets/d/17H2IL-o2G-JAwaukZCZ0aCfL09nEthZb_EUrB3wikwY/edit#gid=0" target="_blank">data</a>.</p>
         <h4>Types of Activities</h4>
         <ul class="activities-list">
-          <li class="item-activity obstruction">Obstruction</li>
-          <li class="item-activity conflict">Conflict</li>
-          <li class="item-activity lie">Lie</li>
-          <li class="item-activity departure">Departure</li>
+          <li class="item-activity obstruction" role="button" tabindex="0">Obstruction</li>
+          <li class="item-activity conflict" role="button" tabindex="0">Conflict</li>
+          <li class="item-activity lie" role="button" tabindex="0">Lie</li>
+          <li class="item-activity departure" role="button" tabindex="0">Departure</li>
+          <li class="item-activity all hidden" role="button" tabindex="0">View All</li>
       </div>
     </header>
 
@@ -60,6 +61,32 @@
       // TODO Add filtering and sorting
       var options = {'data': data.reverse(), 'tableDiv': '#acts'}
       Sheetsee.makeTable(options)
+    }
+
+    $('li.item-activity').click(function(event) {
+      filter(event.target.classList[1])
+    })
+
+    function filter(type) {
+      // If you're switching filters, first reset the applied filter.
+      if (type !== 'all') {
+        filter('all')
+        $('.item-activity.all')[0].classList.remove('hidden')
+      } else {
+        $('.item-activity.all')[0].classList.add('hidden')
+      }
+
+      var items = acts.querySelectorAll('.item')
+      for (var i = 0; i < items.length; i++) {
+        if (type === 'all') {
+          items[i].classList.remove('hidden')
+        } else {
+          var category = items[i].querySelector('.item-activity').textContent.trim();
+          if (category !== type) {
+            items[i].classList.add('hidden')
+          }
+        }
+      }
     }
     </script>
 
