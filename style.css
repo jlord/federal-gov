@@ -13,6 +13,10 @@ a {
   border-bottom: 1px dotted #3f6def;
 }
 
+.hidden {
+  display: none !important;
+}
+
 .wrapper {
   max-width: 980px;
   margin: 0 auto;
@@ -28,6 +32,7 @@ a {
   margin: 0; padding: 0;
   margin-right: 16px;
   padding: 8px 16px;
+  cursor: pointer;
 }
 
 header {
@@ -84,7 +89,7 @@ header {
   color: #f3eded;
 }
 
-.illegal {
+.conflict {
   background-color: #ffb66c;
   color: #fff6ee;
 }

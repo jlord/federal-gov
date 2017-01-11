@@ -13,7 +13,7 @@ There are a lot of things happening daily as a new administration prepares to ta
 
 ### Selection
 
-I am selecting events which challenge the way the US Government functions. Right now these are broadly categorized by what it is that made each event newsworthy: Is it potentially illegal? Is a lie? Does it intend to hinder the normal functions of the government? Is it a shocking break with convention? If the government does something good that's great, but those aren't the things to cover here. Feel free to [fork this repository and create that site](http://jlord.github.io/forkngo) if you so desire.  
+I am selecting events which challenge the way the US Government functions. Right now these are broadly categorized by what it is that made each event newsworthy: Is it an illegal conflict of interest? Is a lie? Does it intend to hinder the normal functions of the government? Is it a shocking break with convention? If the government does something good that's great, but those aren't the things to cover here. Feel free to [fork this repository and create that site](http://jlord.github.io/forkngo) if you so desire.  
 
 ### Sources
 
@@ -42,3 +42,7 @@ I want to experiment with formats more (calendar? table?) and add sorting and fi
 ## Technical
 
 This site uses a band-aided version of my [sheetsee.js](https://github.com/jlord/sheetsee.js) (I am gonna be refreshing the project soon!) library and tabletop.js to visual data from a Google Spreadsheet.
+
+### Want to use the data in your project?
+
+The data from the spreadsheet is public and accessible through this Google Spreadsheet key: `17H2IL-o2G-JAwaukZCZ0aCfL09nEthZb_EUrB3wikwY`. You can use the Google API to work with it or a library like [Tabletop.js](https://github.com/jsoma/tabletop) which will return the contents to you as nice, clean JSON.
